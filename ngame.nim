@@ -3,7 +3,7 @@ import games/ghost
 import games/wordle
 import os, strutils
 
-const games = [
+let games = [
   puissance4.main,
   ghost.main,
   wordle.main,

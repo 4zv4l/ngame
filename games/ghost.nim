@@ -24,7 +24,7 @@ proc play_round(score: uint): bool =
     except:
       echo "not a right number..."
 
-proc main*() =
+proc main*() {.gcsafe.} =
   randomize()
   var score: uint = 0
   while play_round(score):

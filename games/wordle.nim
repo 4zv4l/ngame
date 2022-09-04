@@ -1054,7 +1054,7 @@ proc play(secret: string): bool =
       return true
   return false
 
-proc main*() =
+proc main*() {.gcsafe.} =
   # show the rules
   usage()
   # init the randomizer

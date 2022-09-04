@@ -1,5 +1,6 @@
 import os  ## shellcmd
-import nre  ## reg.contains
+#import nre  ## reg.contains
+import regex  ## reg.contains
 import strutils  ## str.contains
 
 const length = 7 ## column length
@@ -103,7 +104,7 @@ proc getCol(p: string): uint =
     except: column = 0
   return column
 
-proc main*() =
+proc main*() {.gcsafe.} =
   var board = initBoard()
   let ps = [p1, p2]
   var round: uint = 0
