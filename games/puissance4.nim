@@ -104,7 +104,7 @@ proc getCol(p: string): uint =
     except: column = 0
   return column
 
-proc main*() {.gcsafe.} =
+proc main*() =
   var board = initBoard()
   let ps = [p1, p2]
   var round: uint = 0
